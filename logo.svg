@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <!-- Primary Dental Gradient -->
+    <linearGradient id="dentAtlasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12304A" />
+      <stop offset="55%" stop-color="#1B4B6E" />
+      <stop offset="100%" stop-color="#2F80A8" />
+    </linearGradient>
+
+    <!-- Teal Clinical Accent Gradient -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2FA7A0" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <!-- Tooth Enamel Pearlescent Gradient -->
+    <linearGradient id="toothGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#F0F8FA" />
+      <stop offset="100%" stop-color="#D7E8F0" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Shield -->
+  <rect x="8" y="8" width="104" height="104" rx="28" fill="url(#dentAtlasBg)" />
+  <rect x="10" y="10" width="100" height="100" rx="26" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="2" />
+
+  <!-- Radiographic Measurement Grid Accent (Atlas Aspect) -->
+  <circle cx="60" cy="60" r="38" stroke="url(#tealGrad)" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.4" />
+  <line x1="22" y1="60" x2="98" y2="60" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.25" />
+  <line x1="60" y1="22" x2="60" y2="98" stroke="#38BDF8" stroke-width="0.8" stroke-opacity="0.25" />
+
+  <!-- Stylized Anatomical Molar (Tooth) -->
+  <path d="M40 32 
+           C48 30, 54 36, 60 36 
+           C66 36, 72 30, 80 32 
+           C88 34, 94 44, 92 56 
+           C90 68, 85 82, 78 94 
+           C75 100, 68 96, 65 88 
+           C63 82, 62 72, 60 72 
+           C58 72, 57 82, 55 88 
+           C52 96, 45 100, 42 94 
+           C35 82, 30 68, 28 56 
+           C26 44, 32 34, 40 32 Z" 
+        fill="url(#toothGrad)" 
+        filter="url(#softGlow)" />
+
+  <!-- Internal Root Canal / Pulp Cavity Anatomy (Endodontic Path) -->
+  <path d="M50 48 
+           C55 50, 58 54, 60 54 
+           C62 54, 65 50, 70 48 
+           C73 54, 71 66, 69 76 
+           C67 82, 64 88, 64 88 
+           M56 76 C54 82, 56 88, 56 88" 
+        stroke="url(#tealGrad)" 
+        stroke-width="2.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Clinical Diamond Highlight / Cusp Apex -->
+  <circle cx="43" cy="40" r="3" fill="#38BDF8" />
+  <circle cx="77" cy="40" r="3" fill="#38BDF8" />
+  <polygon points="60,22 62,26 66,27 63,30 64,34 60,32 56,34 57,30 54,27 58,26" fill="#FBBF24" opacity="0.9" />
+</svg>

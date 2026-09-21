@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">سياسة الخصوصية — DentAtlas دنت أطلس</title>
+  <meta name="description" content="سياسة الخصوصية الرسمية لتطبيق DentAtlas (دنت أطلس) — موسوعة طب الأسنان السريرية ومحاكي الأشعة وبنك الأسئلة السريري.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #12304A;
+      --primary-light: #2F80A8;
+      --accent: #2FA7A0;
+      --accent-light: #38BDF8;
+      --bg: #F6F9FB;
+      --bg-card: #FFFFFF;
+      --text: #17212B;
+      --text-muted: #6B7785;
+      --border: #DCE5EB;
+      --highlight-bg: #E6F6F5;
+      --highlight-border: #A7F3D0;
+      --highlight-text: #064E3B;
+    }
+    [data-theme="dark"] {
+      --primary: #2F80A8;
+      --primary-light: #38BDF8;
+      --accent: #2FA7A0;
+      --accent-light: #5EEAD4;
+      --bg: #0F1720;
+      --bg-card: #18222E;
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+      --border: #2D3B48;
+      --highlight-bg: #0C2825;
+      --highlight-border: #13523F;
+      --highlight-text: #5EEAD4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+    body {
+      font-family: 'Cairo', 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    [lang="en"] body { font-family: 'Inter', 'Cairo', sans-serif; }
+    header {
+      background: linear-gradient(135deg, #12304A, #1B4B6E, #2F80A8);
+      color: #FFFFFF;
+      padding: 44px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .top-bar {
+      position: absolute;
+      top: 15px;
+      inset-inline-end: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .action-btn {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+    .action-btn:hover { background: rgba(255, 255, 255, 0.28); }
+    .back-btn { position: absolute; top: 15px; inset-inline-start: 20px; }
+    .header-logo { width: 56px; height: 56px; margin-bottom: 12px; }
+    h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; margin-bottom: 6px; }
+    .header-sub { opacity: 0.92; font-size: 16px; }
+    main {
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex: 1;
+    }
+    .summary-card {
+      background: var(--highlight-bg);
+      border: 1px solid var(--highlight-border);
+      border-radius: 18px;
+      padding: 24px;
+      color: var(--highlight-text);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 4px 12px rgba(47, 128, 168, 0.08);
+    }
+    .summary-card i { font-size: 28px; margin-top: 2px; color: var(--accent); }
+    .policy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .policy-section h2 {
+      font-size: 19px;
+      color: var(--primary-light);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+    }
+    .policy-section ul {
+      padding-inline-start: 24px;
+      color: var(--text-muted);
+    }
+    .policy-section li { margin-bottom: 9px; }
+    .policy-section p { color: var(--text-muted); margin-bottom: 8px; }
+    strong { color: var(--text); }
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg-card);
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--primary-light); text-decoration: none; font-weight: 600; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="./" class="action-btn back-btn" id="back-link">
+      <i class="fa-solid fa-arrow-right" id="back-icon"></i>
+      <span id="back-text">الرئيسية</span>
+    </a>
+    <div class="top-bar">
+      <button class="action-btn" id="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe"></i>
+        <span id="lang-text">English</span>
+      </button>
+      <button class="action-btn" id="theme-btn" onclick="toggleTheme()">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+    </div>
+    <img src="logo.svg" alt="DentAtlas Logo" class="header-logo">
+    <h1 id="hdr-title">سياسة الخصوصية وأمان البيانات السريرية</h1>
+    <p class="header-sub" id="hdr-sub">DentAtlas — موسوعة طب الأسنان ومحاكي الحالات والأشعة</p>
+  </header>
+
+  <main>
+    <div class="summary-card">
+      <i class="fa-solid fa-tooth"></i>
+      <div>
+        <div style="font-size: 17px; font-weight: 800; margin-bottom: 4px;" id="sum-title">ميثاق الخصوصية السريرية والأكاديمية</div>
+        <p id="sum-desc">تطبيق DentAtlas مصمم لخدمة أطباء وطلاب طب الأسنان بأعلى معايير الأمان: لا إعلانات، لا تعقب تجاري، ولا مشاركة لأي بيانات. سجلات الحالات السريرية وصور الأشعة وتاريخ التدريب تبقى على جهازك بنسبة 100%، والمزامنة السحابية اختيارية تماماً ومحمية بعزل صارم للسجلات.</p>
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec1-title"><i class="fa-solid fa-hospital"></i> 1. من نحن وهوية المشروع</h2>
+      <p id="sec1-desc">DentAtlas (دنت أطلس) منصة تعليمية ومرجع سريري متقدم لطب وجراحة الأسنان تطوره وتشغله منظومة NuclearMindSys. تهدف المنصة إلى تزويد ممارسي وطلاب طب الأسنان بمكتبة مرجعية مدققة حرفياً، ومحاكي تشخيصي للحالات السريرية وصور الأشعة (Periapical, Panoramic, CBCT)، وبنك أسئلة ومصطلحات متكامل.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec2-title"><i class="fa-solid fa-hard-drive"></i> 2. التخزين المحلي والعمل دون إنترنت (Offline-First)</h2>
+      <ul id="sec2-list">
+        <li><strong>بياناتك ملكك محلياً:</strong> كافة الكتب المقروءة، وملاحظات الحالات، وسجلات بطاقات التكرار المتباعد (SM-2+)، وعلامات الاختبارات تُخزن محلياً داخل قاعدة بيانات SQLite/Drift على جهازك ولا تخرج منه إطلاقاً إلا بطلبك.</li>
+        <li><strong>خلو تام من التعقب التجاري:</strong> لا يحتوي التطبيق على أي مكتبات إعلانات أو أدوات جمع بيانات بيومترية أو برمجيات تحليلية تجارية تراقب استخدامك.</li>
+        <li><strong>العمل بدون إنترنت:</strong> يعمل التطبيق بكامل طاقته ومحتوياته دون الحاجة إلى اتصال دائم بالشبكة.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec3-title"><i class="fa-solid fa-cloud-arrow-up"></i> 3. المزامنة السحابية الاختيارية (Cloud Sync)</h2>
+      <ul id="sec3-list">
+        <li><strong>ميزة اختيارية:</strong> المزامنة السحابية معطلة افتراضياً، وتُفعل فقط عند تسجيل الدخول الطوعي بحساب Google OAuth لمزامنة التقدم وملاحظات الحالات بين هاتفك وحاسوبك.</li>
+        <li><strong>عزل الحسابات (Row-Level Security):</strong> تُخزن البيانات على مشروع Supabase مشفر (HTTPS) مع سياسات أمان RLS صارمة على مستوى قاعدة بيانات PostgreSQL، بحيث يتعذر على أي طرف قراءة أو تعديل بيانات غيره.</li>
+        <li><strong>إلغاء المزامنة الفوري:</strong> يمكنك تسجيل الخروج أو مسح السجلات السحابية في أي وقت مع بقاء نسختك المحلية كاملة على جهازك.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec4-title"><i class="fa-solid fa-user-shield"></i> 4. سرية بيانات المرضى والحالات السريرية</h2>
+      <p id="sec4-desc">صُمم محاكي الحالات السريرية وصور الأشعة للأغراض التعليمية والأكاديمية والتدريب السريري. نوصي الأطباء والطلاب بعدم إدخال أي أسماء كاملة لمرضى حقيقيين أو أرقام هويات شخصية في الملاحظات الحرة للحفاظ التام على أخلاقيات وسرية الممارسة الطبية.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec5-title"><i class="fa-solid fa-key"></i> 5. الأذونات المطلوبة ومبرراتها</h2>
+      <ul id="sec5-list">
+        <li><strong>التخزين والملفات:</strong> لحفظ واسترجاع ملفات الحزم الأطلسية المصورة وتصدير بطاقات المذاكرة والنسخ الاحتياطي لقاعدة بياناتك.</li>
+        <li><strong>الكاميرا (اختياري):</strong> في حال رغبت في تصوير لقطات سنوية أو صور أشعة لإضافتها لسجل حالاتك الشخصي.</li>
+        <li><strong>الإنترنت:</strong> مطلوب حصراً للمزامنة السحابية الاختيارية والتحقق من التحديثات البرمجية.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec6-title"><i class="fa-solid fa-envelope-open-text"></i> 6. التحديثات والتواصل المهني</h2>
+      <p id="sec6-desc">يتم تحديث هذه السياسة دورياً تماشياً مع معايير الأمان والتطوير البرمجي. لأي استفسار حول سياسة الخصوصية، تواصل معنا عبر مستودع المنظومة على <a href="https://github.com/NuclearMindSys" target="_blank" rel="noopener">GitHub / NuclearMindSys</a>.</p>
+      <p><strong>تاريخ آخر تحديث:</strong> 21 سبتمبر 2026</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>DentAtlas (دنت أطلس) © 2026 · تطوير وتشغيل <a href="https://github.com/NuclearMindSys" target="_blank" rel="noopener">NuclearMindSys</a></p>
+    <p style="margin-top: 6px;"><a href="./">الصفحة الرئيسية لـ DentAtlas</a> · <a href="https://github.com/NuclearMindSys/DentAtlas" target="_blank" rel="noopener">المستودع السريري على GitHub</a></p>
+  </footer>
+
+  <script>
+    const translations = {
+      ar: {
+        pageTitle: "سياسة الخصوصية — DentAtlas دنت أطلس",
+        backText: "الرئيسية",
+        langText: "English",
+        hdrTitle: "سياسة الخصوصية وأمان البيانات السريرية",
+        hdrSub: "DentAtlas — موسوعة طب الأسنان ومحاكي الحالات والأشعة",
+        sumTitle: "ميثاق الخصوصية السريرية والأكاديمية",
+        sumDesc: "تطبيق DentAtlas مصمم لخدمة أطباء وطلاب طب الأسنان بأعلى معايير الأمان: لا إعلانات، لا تعقب تجاري، ولا مشاركة لأي بيانات. سجلات الحالات السريرية وصور الأشعة وتاريخ التدريب تبقى على جهازك بنسبة 100%، والمزامنة السحابية اختيارية تماماً ومحمية بعزل صارم للسجلات.",
+        sec1Title: '<i class="fa-solid fa-hospital"></i> 1. من نحن وهوية المشروع',
+        sec1Desc: 'DentAtlas (دنت أطلس) منصة تعليمية ومرجع سريري متقدم لطب وجراحة الأسنان تطوره وتشغله منظومة NuclearMindSys. تهدف المنصة إلى تزويد ممارسي وطلاب طب الأسنان بمكتبة مرجعية مدققة حرفياً، ومحاكي تشخيصي للحالات السريرية وصور الأشعة (Periapical, Panoramic, CBCT)، وبنك أسئلة ومصطلحات متكامل.',
+        sec2Title: '<i class="fa-solid fa-hard-drive"></i> 2. التخزين المحلي والعمل دون إنترنت (Offline-First)',
+        sec2List: '<li><strong>بياناتك ملكك محلياً:</strong> كافة الكتب المقروءة، وملاحظات الحالات، وسجلات بطاقات التكرار المتباعد (SM-2+)، وعلامات الاختبارات تُخزن محلياً داخل قاعدة بيانات SQLite/Drift على جهازك ولا تخرج منه إطلاقاً إلا بطلبك.</li><li><strong>خلو تام من التعقب التجاري:</strong> لا يحتوي التطبيق على أي مكتبات إعلانات أو أدوات جمع بيانات بيومترية أو برمجيات تحليلية تجارية تراقب استخدامك.</li><li><strong>العمل بدون إنترنت:</strong> يعمل التطبيق بكامل طاقته ومحتوياته دون الحاجة إلى اتصال دائم بالشبكة.</li>',
+        sec3Title: '<i class="fa-solid fa-cloud-arrow-up"></i> 3. المزامنة السحابية الاختيارية (Cloud Sync)',
+        sec3List: '<li><strong>ميزة اختيارية:</strong> المزامنة السحابية معطلة افتراضياً، وتُفعل فقط عند تسجيل الدخول الطوعي بحساب Google OAuth لمزامنة التقدم وملاحظات الحالات بين هاتفك وحاسوبك.</li><li><strong>عزل الحسابات (Row-Level Security):</strong> تُخزن البيانات على مشروع Supabase مشفر (HTTPS) مع سياسات أمان RLS صارمة على مستوى قاعدة بيانات PostgreSQL، بحيث يتعذر على أي طرف قراءة أو تعديل بيانات غيره.</li><li><strong>إلغاء المزامنة الفوري:</strong> يمكنك تسجيل الخروج أو مسح السجلات السحابية في أي وقت مع بقاء نسختك المحلية كاملة على جهازك.</li>',
+        sec4Title: '<i class="fa-solid fa-user-shield"></i> 4. سرية بيانات المرضى والحالات السريرية',
+        sec4Desc: 'صُمم محاكي الحالات السريرية وصور الأشعة للأغراض التعليمية والأكاديمية والتدريب السريري. نوصي الأطباء والطلاب بعدم إدخال أي أسماء كاملة لمرضى حقيقيين أو أرقام هويات شخصية في الملاحظات الحرة للحفاظ التام على أخلاقيات وسرية الممارسة الطبية.',
+        sec5Title: '<i class="fa-solid fa-key"></i> 5. الأذونات المطلوبة ومبرراتها',
+        sec5List: '<li><strong>التخزين والملفات:</strong> لحفظ واسترجاع ملفات الحزم الأطلسية المصورة وتصدير بطاقات المذاكرة والنسخ الاحتياطي لقاعدة بياناتك.</li><li><strong>الكاميرا (اختياري):</strong> في حال رغبت في تصوير لقطات سنوية أو صور أشعة لإضافتها لسجل حالاتك الشخصي.</li><li><strong>الإنترنت:</strong> مطلوب حصراً للمزامنة السحابية الاختيارية والتحقق من التحديثات البرمجية.</li>',
+        sec6Title: '<i class="fa-solid fa-envelope-open-text"></i> 6. التحديثات والتواصل المهني',
+        sec6Desc: 'يتم تحديث هذه السياسة دورياً تماشياً مع معايير الأمان والتطوير البرمجي. لأي استفسار حول سياسة الخصوصية، تواصل معنا عبر مستودع المنظومة على GitHub / NuclearMindSys.'
+      },
+      en: {
+        pageTitle: "Privacy Policy — DentAtlas Dental Ecosystem",
+        backText: "Home",
+        langText: "العربية",
+        hdrTitle: "Privacy Policy & Clinical Data Security",
+        hdrSub: "DentAtlas — Clinical Dental Encyclopedia & Radiographic Simulator",
+        sumTitle: "Clinical & Academic Privacy Pledge",
+        sumDesc: "DentAtlas is engineered for dental practitioners and students with the highest security standards: zero ads, zero commercial tracking, and zero data sales. 100% of your clinical cases, radiographic evaluations, and study scores remain stored locally on your device. Cloud sync is strictly optional and guarded by database-level Row-Level Security.",
+        sec1Title: '<i class="fa-solid fa-hospital"></i> 1. Who We Are & Project Identity',
+        sec1Desc: 'DentAtlas is an advanced clinical and educational platform for dentistry developed by NuclearMindSys. It provides an unabridged verbatim textbook library, interactive clinical case simulations, radiographic diagnostic workflows (Periapical, Panoramic, CBCT), and a verified bilingual question bank.',
+        sec2Title: '<i class="fa-solid fa-hard-drive"></i> 2. Offline-First Architecture & Local Storage',
+        sec2List: '<li><strong>Local Device Ownership:</strong> All textbook reading progress, clinical case diagnoses, SM-2+ spaced repetition intervals, and exam scores are stored safely inside an offline SQLite/Drift database on your device.</li><li><strong>Zero Commercial Telemetry:</strong> No third-party ad networks, tracking scripts, or data brokers are embedded within the application.</li><li><strong>100% Offline Capability:</strong> Full clinical encyclopedia features remain available without active internet connectivity.</li>',
+        sec3Title: '<i class="fa-solid fa-cloud-arrow-up"></i> 3. Optional Multi-Device Cloud Sync',
+        sec3List: '<li><strong>Opt-In Authentication:</strong> Cloud synchronization is entirely optional via Google OAuth for clinicians wanting cross-device continuity.</li><li><strong>Row-Level Security (RLS):</strong> Data is hosted on Supabase PostgreSQL over encrypted HTTPS with strict RLS policies ensuring no third party can access another clinician’s private case files.</li><li><strong>Instant Data Purge:</strong> You can sign out or purge cloud records anytime while preserving your local offline dataset.</li>',
+        sec4Title: '<i class="fa-solid fa-user-shield"></i> 4. Patient Confidentiality & Case Studies',
+        sec4List: 'Case simulations and radiographic modules are designed for training, residency exams, and clinical skill development. Practitioners are advised to de-identify real patient cases and omit personal identifiers from custom clinical notes.',
+        sec5Title: '<i class="fa-solid fa-key"></i> 5. Device Permissions & Purpose',
+        sec5List: '<li><strong>Storage / Media:</strong> Required to cache high-resolution radiographic dental plates and export offline backups.</li><li><strong>Camera (Optional):</strong> Solely used when the practitioner chooses to capture clinical photos or radiographs for local study notes.</li><li><strong>Network:</strong> Used exclusively for optional cloud sync and release update notifications.</li>',
+        sec6Title: '<i class="fa-solid fa-envelope-open-text"></i> 6. Updates & Professional Support',
+        sec6Desc: 'This policy is updated periodically to maintain compliance with health software privacy standards. Reach out via GitHub / NuclearMindSys for inquiries.'
+      }
+    };
+
+    let currentLang = 'ar';
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      applyLanguage(currentLang);
+    }
+
+    function applyLanguage(lang) {
+      const html = document.getElementById('main-html');
+      const t = translations[lang];
+      html.setAttribute('lang', lang);
+      html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+      document.getElementById('page-title').innerText = t.pageTitle;
+      document.getElementById('back-text').innerText = t.backText;
+      document.getElementById('lang-text').innerText = t.langText;
+      document.getElementById('hdr-title').innerText = t.hdrTitle;
+      document.getElementById('hdr-sub').innerText = t.hdrSub;
+      document.getElementById('sum-title').innerText = t.sumTitle;
+      document.getElementById('sum-desc').innerText = t.sumDesc;
+      document.getElementById('sec1-title').innerHTML = t.sec1Title;
+      document.getElementById('sec1-desc').innerText = t.sec1Desc;
+      document.getElementById('sec2-title').innerHTML = t.sec2Title;
+      document.getElementById('sec2-list').innerHTML = t.sec2List;
+      document.getElementById('sec3-title').innerHTML = t.sec3Title;
+      document.getElementById('sec3-list').innerHTML = t.sec3List;
+      document.getElementById('sec4-title').innerHTML = t.sec4Title;
+      document.getElementById('sec4-desc').innerText = t.sec4Desc;
+      document.getElementById('sec5-title').innerHTML = t.sec5Title;
+      document.getElementById('sec5-list').innerHTML = t.sec5List;
+      document.getElementById('sec6-title').innerHTML = t.sec6Title;
+      document.getElementById('sec6-desc').innerText = t.sec6Desc;
+
+      const backIcon = document.getElementById('back-icon');
+      if (lang === 'en') {
+        backIcon.className = 'fa-solid fa-arrow-left';
+      } else {
+        backIcon.className = 'fa-solid fa-arrow-right';
+      }
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      const themeIcon = document.getElementById('theme-icon');
+      if (isDark) {
+        html.removeAttribute('data-theme');
+        themeIcon.className = 'fa-solid fa-moon';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fa-solid fa-sun';
+      }
+    }
+  </script>
+</body>
+</html>
