@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="meta-title">الدعم الفني والأسئلة الشائعة — DentAtlas دنت أطلس</title>
+  <meta name="description" content="مركز الدعم الفني والأسئلة الشائعة لتطبيق DentAtlas (دنت أطلس): حلول تسجيل الدخول عبر Google، العمل دون إنترنت، ومزامنة السجلات.">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/shared.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="./" class="brand">
+        <img src="assets/brand/logo_120.png" alt="DentAtlas Logo" class="brand-logo">
+        <div>
+          <div class="brand-name">
+            <span>DENTATLAS</span>
+            <span class="brand-badge">SUPPORT</span>
+          </div>
+          <span class="brand-subtitle" id="nav-tagline">الموسوعة السريرية لطب وجراحة الأسنان</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="./" class="nav-link" id="nav-home">الرئيسية</a>
+        <a href="about.html" class="nav-link" id="nav-about">حول المنصة</a>
+        <a href="privacy.html" class="nav-link" id="nav-privacy">الخصوصية</a>
+        <a href="terms.html" class="nav-link" id="nav-terms">الشروط</a>
+        <a href="support.html" class="nav-link active" id="nav-support">الدعم الفني</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">تواصل معنا</a>
+        <a href="delete-account.html" class="nav-link" id="nav-delete">حذف الحساب</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-btn" onclick="toggleLanguage(supportI18n)">
+          <i class="fa-solid fa-globe"></i>
+          <span id="lang-name">English</span>
+        </button>
+        <button class="icon-btn" onclick="toggleTheme()" title="تبديل المظهر">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="subpage-hero">
+    <h1 id="hero-title">مركز الدعم الفني والأسئلة الشائعة</h1>
+    <p id="hero-sub">إرشادات شاملة لحل المشكلات التقنية، تشغيل التطبيق على الحواسيب والأجهزة الذكية، وتأكيد موثوقية العمل دون إنترنت.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-main">
+
+    <!-- Direct Support Box -->
+    <div class="highlight-box">
+      <i class="fa-solid fa-headset"></i>
+      <div>
+        <h3 id="help-title">هل تحتاج إلى مساعدة تقنية فورية؟</h3>
+        <p id="help-desc">فريق الدعم الفني المعتمد لمنظومة NuclearMindSys جاهز للإجابة على استفساراتك المتعلقة بالتثبيت، ومزامنة الحساب، والإبلاغ عن أي ملحوظات علمية. راسلنا مباشرة على: <a href="mailto:NuclearMindSys@gmail.com" style="color: var(--dental-blue); font-weight: 800;">NuclearMindSys@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- FAQ 1: Desktop Sign In -->
+    <div class="content-card">
+      <h2 id="faq1-q"><i class="fa-solid fa-desktop"></i> كيف يعمل تسجيل الدخول بحساب Google على نظام Windows؟</h2>
+      <p id="faq1-a1">عند الضغط على "تسجيل الدخول باستخدام Google" داخل تطبيق Windows Desktop، يتبع التطبيق معيار التفويض الآمن لنظام التشغيل (RFC 8252):</p>
+      <ol id="faq1-ol">
+        <li>يقوم التطبيق بتشغيل خادم استماع محلي مؤقت وآمن على العنوان <code>127.0.0.1</code> بمنفذ ديناميكي.</li>
+        <li>يفتح متصفحك الافتراضي (Chrome, Edge, Firefox) تلقائياً لإتمام تسجيل الدخول عبر واجهة Google الرسمية المشفرة.</li>
+        <li>بمجرد موافقتك، يُعاد توجيه المتصفح بأمان إلى الخادم المحلي لإتمام الجلسة، وتظهر لك صفحة نجاح معتمدة لـ DentAtlas، ثم يعود التطبيق للواجهة الرئيسية فوراً.</li>
+      </ol>
+      <p id="faq1-note" style="font-size: 13px; color: var(--text-muted); margin-top: 8px;"><em>ملاحظة: تأكد من السماح للتطبيق بالوصول عبر جدار الحماية المحلي لنظام Windows (Loopback network permission).</em></p>
+    </div>
+
+    <!-- FAQ 2: Offline First -->
+    <div class="content-card">
+      <h2 id="faq2-q"><i class="fa-solid fa-signal-stream"></i> هل يتطلب التطبيق اتصالاً دائماً بالإنترنت؟</h2>
+      <p id="faq2-a"><strong>لا على الإطلاق.</strong> DentAtlas تطبيق محلي بالكامل (Offline-First). كافة المقررات والكتب (أكثر من 740 درساً)، وبنك الأسئلة (11,485+ سؤالاً)، ومحاكي الأشعة السينية، وبنك الأخطاء، ونظام التكرار المتباعد تعمل بكفاءة تامة 100% دون الحاجة لأي اتصال بالشبكة.</p>
+      <p id="faq2-sync">يلزم الاتصال بالإنترنت فقط عند تنزيل حزم محتوى جديدة، أو عند رغبتك في مزامنة تقدمك السحابي مع أجهزتك الأخرى.</p>
+    </div>
+
+    <!-- FAQ 3: Cloud Sync -->
+    <div class="content-card">
+      <h2 id="faq3-q"><i class="fa-solid fa-arrows-rotate"></i> كيف تتم مزامنة التقدم وبنك الأخطاء بين الهاتف والحاسوب؟</h2>
+      <p id="faq3-a">يكفي تسجيل الدخول بنفس حساب Google على كلا الجهازين. سيقوم التطبيق تلقائياً بمزامنة سجل إجاباتك، ومستوى إتقانك للمقررات، وبطاقات المراجعة المستحقة مع قاعدة بياناتك المشفرة على Supabase، مع الحفاظ الكامل على خصوصيتك.</p>
+    </div>
+
+    <!-- FAQ 4: Content Discrepancy Reporting -->
+    <div class="content-card">
+      <h2 id="faq4-q"><i class="fa-solid fa-pen-ruler"></i> كيف أبلغ عن خطأ طباعي أو استفسار حول تعليل سؤال؟</h2>
+      <p id="faq4-a">تلتزم منصة DentAtlas بقانون النقل الحرفي للمراجع. إذا لاحظت أي تباين بين السؤال ومصدره المطبوع، يمكنك الإبلاغ عبر زر الإبلاغ المباشر المتاح داخل واجهة السؤال في التطبيق، أو مراسلتنا مباشرة عبر البريد الإلكتروني مع ذكر رقم السؤال والكتاب المرجعي، وسيقوم الفريق الأكاديمي بتدقيقها فوراً.</p>
+    </div>
+
+    <!-- FAQ 5: Technical vs Clinical Support -->
+    <div class="alert-warning-box">
+      <i class="fa-solid fa-stethoscope"></i>
+      <div>
+        <h3 id="scope-title">التمييز الصارم بين الدعم التقني والاستشارة الطبية</h3>
+        <p id="scope-desc">يقدم فريق الدعم الفني المساعدة الحصرية المتعلقة بجوانب البرمجيات، وحسابات الدخول، ومزامنة البيانات. نؤكد بحزم أن فريق الدعم والمنصة <strong>لا يقدمان أي استشارات أو توجيهات علاجية لحالات مرضى واقعيين</strong> تحت أي ظرف، التزاماً بأخلاقيات المهنة والمعايير الطبية الدولية.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <img src="assets/brand/logo_120.png" alt="DentAtlas Logo" class="footer-logo">
+      <div class="footer-brand" id="ft-brand">دنت أطلس · DENTATLAS</div>
+      <p class="footer-tagline" id="ft-tagline">الموسوعة السريرية لطب وجراحة الأسنان — 100% بدون إنترنت</p>
+
+      <div class="footer-links">
+        <a href="./" class="footer-link" id="fl-home">الرئيسية</a>
+        <a href="about.html" class="footer-link" id="fl-about">حول المنصة</a>
+        <a href="privacy.html" class="footer-link" id="fl-privacy">سياسة الخصوصية</a>
+        <a href="terms.html" class="footer-link" id="fl-terms">شروط الاستخدام</a>
+        <a href="support.html" class="footer-link" id="fl-support">الدعم الفني والأسئلة الشائعة</a>
+        <a href="contact.html" class="footer-link" id="fl-contact">تواصل معنا</a>
+        <a href="delete-account.html" class="footer-link" id="fl-delete">حذف الحساب والبيانات</a>
+        <a href="https://github.com/NuclearMindSys/DentAtlas" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a>
+      </div>
+
+      <p class="footer-copy" id="ft-copy">DentAtlas © 2026 · تطوير وتشغيل NuclearMindSys. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/shared.js"></script>
+  <script>
+    const supportI18n = {
+      ar: {
+        metaTitle: "الدعم الفني والأسئلة الشائعة — DentAtlas دنت أطلس",
+        heroTitle: "مركز الدعم الفني والأسئلة الشائعة",
+        heroSub: "إرشادات شاملة لحل المشكلات التقنية، تشغيل التطبيق على الحواسيب والأجهزة الذكية، وتأكيد موثوقية العمل دون إنترنت.",
+        helpTitle: "هل تحتاج إلى مساعدة تقنية فورية؟",
+        helpDesc: "فريق الدعم الفني المعتمد لمنظومة NuclearMindSys جاهز للإجابة على استفساراتك المتعلقة بالتثبيت، ومزامنة الحساب، والإبلاغ عن أي ملحوظات علمية. راسلنا مباشرة على: <a href=\"mailto:NuclearMindSys@gmail.com\" style=\"color: var(--dental-blue); font-weight: 800;\">NuclearMindSys@gmail.com</a>",
+        faq1Q: '<i class="fa-solid fa-desktop"></i> كيف يعمل تسجيل الدخول بحساب Google على نظام Windows؟',
+        faq1A1: "عند الضغط على \"تسجيل الدخول باستخدام Google\" داخل تطبيق Windows Desktop، يتبع التطبيق معيار التفويض الآمن لنظام التشغيل (RFC 8252):",
+        faq1Ol: "<li>يقوم التطبيق بتشغيل خادم استماع محلي مؤقت وآمن على العنوان <code>127.0.0.1</code> بمنفذ ديناميكي.</li><li>يفتح متصفحك الافتراضي (Chrome, Edge, Firefox) تلقائياً لإتمام تسجيل الدخول عبر واجهة Google الرسمية المشفرة.</li><li>بمجرد موافقتك، يُعاد توجيه المتصفح بأمان إلى الخادم المحلي لإتمام الجلسة، وتظهر لك صفحة نجاح معتمدة لـ DentAtlas، ثم يعود التطبيق للواجهة الرئيسية فوراً.</li>",
+        faq1Note: "<em>ملاحظة: تأكد من السماح للتطبيق بالوصول عبر جدار الحماية المحلي لنظام Windows (Loopback network permission).</em>",
+        faq2Q: '<i class="fa-solid fa-signal-stream"></i> هل يتطلب التطبيق اتصالاً دائماً بالإنترنت؟',
+        faq2A: "<strong>لا على الإطلاق.</strong> DentAtlas تطبيق محلي بالكامل (Offline-First). كافة المقررات والكتب (أكثر من 740 درساً)، وبنك الأسئلة (11,485+ سؤالاً)، ومحاكي الأشعة السينية، وبنك الأخطاء، ونظام التكرار المتباعد تعمل بكفاءة تامة 100% دون الحاجة لأي اتصال بالشبكة.",
+        faq2Sync: "يلزم الاتصال بالإنترنت فقط عند تنزيل حزم محتوى جديدة، أو عند رغبتك في مزامنة تقدمك السحابي مع أجهزتك الأخرى.",
+        faq3Q: '<i class="fa-solid fa-arrows-rotate"></i> كيف تتم مزامنة التقدم وبنك الأخطاء بين الهاتف والحاسوب؟',
+        faq3A: "يكفي تسجيل الدخول بنفس حساب Google على كلا الجهازين. سيقوم التطبيق تلقائياً بمزامنة سجل إجاباتك، ومستوى إتقانك للمقررات، وبطاقات المراجعة المستحقة مع قاعدة بياناتك المشفرة على Supabase، مع الحفاظ الكامل على خصوصيتك.",
+        faq4Q: '<i class="fa-solid fa-pen-ruler"></i> كيف أبلغ عن خطأ طباعي أو استفسار حول تعليل سؤال؟',
+        faq4A: "تلتزم منصة DentAtlas بقانون النقل الحرفي للمراجع. إذا لاحظت أي تباين بين السؤال ومصدره المطبوع، يمكنك الإبلاغ عبر زر الإبلاغ المباشر المتاح داخل واجهة السؤال في التطبيق، أو مراسلتنا مباشرة عبر البريد الإلكتروني مع ذكر رقم السؤال والكتاب المرجعي، وسيقوم الفريق الأكاديمي بتدقيقها فوراً.",
+        scopeTitle: "التمييز الصارم بين الدعم التقني والاستشارة الطبية",
+        scopeDesc: "يقدم فريق الدعم الفني المساعدة الحصرية المتعلقة بجوانب البرمجيات، وحسابات الدخول، ومزامنة البيانات. نؤكد بحزم أن فريق الدعم والمنصة <strong>لا يقدمان أي استشارات أو توجيهات علاجية لحالات مرضى واقعيين</strong> تحت أي ظرف، التزاماً بأخلاقيات المهنة والمعايير الطبية الدولية."
+      },
+      en: {
+        metaTitle: "Support & FAQ — DentAtlas Clinical Dental Ecosystem",
+        heroTitle: "Technical Support & FAQ",
+        heroSub: "Comprehensive troubleshooting guide for desktop and mobile authentication, offline persistence, and multi-device progress synchronization.",
+        helpTitle: "Need Immediate Technical Assistance?",
+        helpDesc: "The authorized NuclearMindSys engineering support team is available to assist with client installation, login troubleshooting, and academic inquiries. Reach out directly at: <a href=\"mailto:NuclearMindSys@gmail.com\" style=\"color: var(--dental-blue); font-weight: 800;\">NuclearMindSys@gmail.com</a>",
+        faq1Q: '<i class="fa-solid fa-desktop"></i> How does Google Sign-In work on Windows Desktop?',
+        faq1A1: "When clicking 'Sign in with Google' in the Windows desktop application, the app follows the standard OS loopback authorization pattern (RFC 8252):",
+        faq1Ol: "<li>The app starts a temporary, secure loopback HTTP server bound to <code>127.0.0.1</code> on an ephemeral port.</li><li>It launches your default secure browser (Chrome, Edge, Firefox) to authenticate via Google's official OAuth consent screen.</li><li>Upon completion, the browser redirects back to the local loopback server, displays a verified DentAtlas completion screen, and seamlessly activates your session in the desktop app.</li>",
+        faq1Note: "<em>Note: Ensure that your Windows Defender Firewall allows loopback communication for DentAtlas.</em>",
+        faq2Q: '<i class="fa-solid fa-signal-stream"></i> Does DentAtlas require a continuous internet connection?',
+        faq2A: "<strong>No, absolutely not.</strong> DentAtlas is completely Offline-First. All textbook modules (740+ lessons), question banks (11,485+ MCQs), radiographic simulator, and spaced repetition cards run 100% locally from your device's high-speed SQLite database.",
+        faq2Sync: "An internet connection is required only when downloading new content packs or choosing to synchronize progress across multiple devices.",
+        faq3Q: '<i class="fa-solid fa-arrows-rotate"></i> How does progress sync work across devices?',
+        faq3A: "Signing in with the same Google account on both your phone and computer automatically synchronizes your answered questions, mastery metrics, and spaced repetition queues via our secure, encrypted Supabase PostgreSQL cluster with Row-Level Security.",
+        faq4Q: '<i class="fa-solid fa-pen-ruler"></i> How do I report a typographical or reference discrepancy?',
+        faq4A: "DentAtlas maintains a strict 100% unabridged reference law. If you notice any discrepancy between a question and its published reference key, submit an in-app report from the question screen or email our academic team with the question ID and textbook citation for immediate verification.",
+        scopeTitle: "Strict Distinction Between Technical Support & Medical Advice",
+        scopeDesc: "Technical support is strictly confined to application operation, authentication, and data synchronization. Under no circumstances does our technical support team or the platform <strong>provide medical diagnosis or clinical treatment guidance for actual human patients</strong>."
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage(supportI18n);
+    });
+  </script>
+</body>
+</html>

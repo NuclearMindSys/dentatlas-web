@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" fill="none">
+  <defs>
+    <linearGradient id="dentAtlasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12304A" />
+      <stop offset="100%" stop-color="#2F80A8" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2FA7A0" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+  <!-- Mini Icon Shield -->
+  <rect x="6" y="8" width="84" height="84" rx="22" fill="url(#dentAtlasGrad)" />
+  <circle cx="48" cy="50" r="30" stroke="url(#tealGrad)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5" />
+  <path d="M34 28 C40 26, 44 31, 48 31 C52 31, 56 26, 62 28 C68 30, 72 38, 70 48 C68 58, 64 70, 59 80 C57 85, 52 82, 50 75 C48 70, 47 62, 45 62 C43 62, 42 70, 40 75 C38 82, 33 85, 31 80 C26 70, 22 58, 20 48 C18 38, 24 30, 34 28 Z" fill="#FFFFFF" />
+  <path d="M41 40 C44 42, 46 45, 48 45 C50 45, 52 42, 55 40 C57 45, 56 55, 54 63 C52 68, 50 73, 50 73 M44 63 C43 68, 44 73, 44 73" stroke="url(#tealGrad)" stroke-width="2" stroke-linecap="round" />
+  <polygon points="48,20 49.5,23 52.5,23.5 50.2,26 51,29 48,27.5 45,29 45.8,26 43.5,23.5 46.5,23" fill="#F59E0B" />
+  
+  <!-- Typographic Wordmark -->
+  <text x="108" y="54" font-family="'Inter', system-ui, sans-serif" font-size="36" font-weight="800" fill="#12304A" letter-spacing="-0.5">Dent<tspan fill="#2F80A8">Atlas</tspan></text>
+  <text x="110" y="78" font-family="'Cairo', system-ui, sans-serif" font-size="14" font-weight="700" fill="#6B7785">دنت أطلس · الموسوعة السريرية لطب وجراحة الأسنان</text>
+</svg>

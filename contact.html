@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="meta-title">تواصل معنا — DentAtlas دنت أطلس</title>
+  <meta name="description" content="قنوات التواصل الرسمية لمنصة DentAtlas (دنت أطلس): الدعم الأكاديمي، البلاغات البرمجية، والاستفسارات التنظيمية لمنظومة NuclearMindSys.">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/shared.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="./" class="brand">
+        <img src="assets/brand/logo_120.png" alt="DentAtlas Logo" class="brand-logo">
+        <div>
+          <div class="brand-name">
+            <span>DENTATLAS</span>
+            <span class="brand-badge">CONNECT</span>
+          </div>
+          <span class="brand-subtitle" id="nav-tagline">الموسوعة السريرية لطب وجراحة الأسنان</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="./" class="nav-link" id="nav-home">الرئيسية</a>
+        <a href="about.html" class="nav-link" id="nav-about">حول المنصة</a>
+        <a href="privacy.html" class="nav-link" id="nav-privacy">الخصوصية</a>
+        <a href="terms.html" class="nav-link" id="nav-terms">الشروط</a>
+        <a href="support.html" class="nav-link" id="nav-support">الدعم الفني</a>
+        <a href="contact.html" class="nav-link active" id="nav-contact">تواصل معنا</a>
+        <a href="delete-account.html" class="nav-link" id="nav-delete">حذف الحساب</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-btn" onclick="toggleLanguage(contactI18n)">
+          <i class="fa-solid fa-globe"></i>
+          <span id="lang-name">English</span>
+        </button>
+        <button class="icon-btn" onclick="toggleTheme()" title="تبديل المظهر">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="subpage-hero">
+    <h1 id="hero-title">قنوات التواصل والاتصال الرسمي</h1>
+    <p id="hero-sub">يسعدنا تواصل الأطباء والأكاديميين والباحثين وطلاب طب الأسنان مع فريق تطوير وإدارة منصة DentAtlas.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-main">
+
+    <!-- Primary Contact Box -->
+    <div class="content-card">
+      <h2 id="sec1-title"><i class="fa-solid fa-envelope-circle-check"></i> البريد الإلكتروني الرسمي المعتمد</h2>
+      <p id="sec1-p1">لأي استفسارات تقنية، أو إشعارات الخصوصية، أو التعاون الأكاديمي، يُرجى مراسلتنا مباشرة على البريد الرسمي المعتمد للمنظومة:</p>
+      <div style="margin: 20px 0;">
+        <a href="mailto:NuclearMindSys@gmail.com" class="btn btn-primary" style="font-size: 16px; padding: 12px 24px;">
+          <i class="fa-solid fa-paper-plane"></i> NuclearMindSys@gmail.com
+        </a>
+      </div>
+      <p id="sec1-p2" style="font-size: 13px; color: var(--text-muted);">نحرص على الرد على كافة الرسائل الأكاديمية والتقنية خلال أيام العمل الرسمية.</p>
+    </div>
+
+    <!-- Official Repositories & Publisher -->
+    <div class="content-card">
+      <h2 id="sec2-title"><i class="fa-brands fa-github"></i> المستودع الرسمي لمنظومة NuclearMindSys</h2>
+      <p id="sec2-p1">DentAtlas مشروع أكاديمي وهندسي يلتزم بالشفافية البرمجية ومتابعة الملاحظات عبر GitHub:</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 16px;">
+        <a href="https://github.com/NuclearMindSys/DentAtlas" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fa-brands fa-github"></i> DentAtlas Repository
+        </a>
+        <a href="https://github.com/NuclearMindSys" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fa-solid fa-building"></i> NuclearMindSys Organization
+        </a>
+      </div>
+    </div>
+
+    <!-- Communication Topics -->
+    <div class="content-card">
+      <h2 id="sec3-title"><i class="fa-solid fa-list-check"></i> مسارات التواصل المعتمدة</h2>
+      <ul id="sec3-ul">
+        <li><strong>الدعم التقني والتشغيلي:</strong> حل مشكلات تثبيت تطبيق Windows أو Android ومزامنة الجلسات.</li>
+        <li><strong>التدقيق الأكاديمي للمراجع:</strong> استقبال الملاحظات التخصصية والكتب والمقررات المقترح إضافتها للمكتبة.</li>
+        <li><strong>مسؤول حماية البيانات (Privacy & Security):</strong> معالجة طلبات تصدير البيانات أو حذف الحسابات السحابية والإبلاغ عن الثغرات الأمنية.</li>
+      </ul>
+    </div>
+
+    <!-- Security Alert -->
+    <div class="highlight-box">
+      <i class="fa-solid fa-shield-virus"></i>
+      <div>
+        <h3 id="sec-alert-title">تنبيه أمني هام</h3>
+        <p id="sec-alert-desc">فريق DentAtlas و NuclearMindSys <strong>لن يطلب منك أبداً</strong> تزويده بكلمات المرور الخاصة بك أو مفاتيح حساب Google الخاص بك. تعامل حصراً مع البريد الإلكتروني الرسمي الموضح أعلاه.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <img src="assets/brand/logo_120.png" alt="DentAtlas Logo" class="footer-logo">
+      <div class="footer-brand" id="ft-brand">دنت أطلس · DENTATLAS</div>
+      <p class="footer-tagline" id="ft-tagline">الموسوعة السريرية لطب وجراحة الأسنان — 100% بدون إنترنت</p>
+
+      <div class="footer-links">
+        <a href="./" class="footer-link" id="fl-home">الرئيسية</a>
+        <a href="about.html" class="footer-link" id="fl-about">حول المنصة</a>
+        <a href="privacy.html" class="footer-link" id="fl-privacy">سياسة الخصوصية</a>
+        <a href="terms.html" class="footer-link" id="fl-terms">شروط الاستخدام</a>
+        <a href="support.html" class="footer-link" id="fl-support">الدعم الفني والأسئلة الشائعة</a>
+        <a href="contact.html" class="footer-link" id="fl-contact">تواصل معنا</a>
+        <a href="delete-account.html" class="footer-link" id="fl-delete">حذف الحساب والبيانات</a>
+        <a href="https://github.com/NuclearMindSys/DentAtlas" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a>
+      </div>
+
+      <p class="footer-copy" id="ft-copy">DentAtlas © 2026 · تطوير وتشغيل NuclearMindSys. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/shared.js"></script>
+  <script>
+    const contactI18n = {
+      ar: {
+        metaTitle: "تواصل معنا — DentAtlas دنت أطلس",
+        heroTitle: "قنوات التواصل والاتصال الرسمي",
+        heroSub: "يسعدنا تواصل الأطباء والأكاديميين والباحثين وطلاب طب الأسنان مع فريق تطوير وإدارة منصة DentAtlas.",
+        sec1Title: '<i class="fa-solid fa-envelope-circle-check"></i> البريد الإلكتروني الرسمي المعتمد',
+        sec1P1: "لأي استفسارات تقنية، أو إشعارات الخصوصية، أو التعاون الأكاديمي، يُرجى مراسلتنا مباشرة على البريد الرسمي المعتمد للمنظومة:",
+        sec1P2: "نحرص على الرد على كافة الرسائل الأكاديمية والتقنية خلال أيام العمل الرسمية.",
+        sec2Title: '<i class="fa-brands fa-github"></i> المستودع الرسمي لمنظومة NuclearMindSys',
+        sec2P1: "DentAtlas مشروع أكاديمي وهندسي يلتزم بالشفافية البرمجية ومتابعة الملاحظات عبر GitHub:",
+        sec3Title: '<i class="fa-solid fa-list-check"></i> مسارات التواصل المعتمدة',
+        sec3Ul: "<li><strong>الدعم التقني والتشغيلي:</strong> حل مشكلات تثبيت تطبيق Windows أو Android ومزامنة الجلسات.</li><li><strong>التدقيق الأكاديمي للمراجع:</strong> استقبال الملاحظات التخصصية والكتب والمقررات المقترح إضافتها للمكتبة.</li><li><strong>مسؤول حماية البيانات (Privacy & Security):</strong> معالجة طلبات تصدير البيانات أو حذف الحسابات السحابية والإبلاغ عن الثغرات الأمنية.</li>",
+        secAlertTitle: "تنبيه أمني هام",
+        secAlertDesc: "فريق DentAtlas و NuclearMindSys <strong>لن يطلب منك أبداً</strong> تزويده بكلمات المرور الخاصة بك أو مفاتيح حساب Google الخاص بك. تعامل حصراً مع البريد الإلكتروني الرسمي الموضح أعلاه."
+      },
+      en: {
+        metaTitle: "Contact Us — DentAtlas Clinical Dental Ecosystem",
+        heroTitle: "Official Contact Channels",
+        heroSub: "We welcome communication from dental practitioners, academic faculty, researchers, and students regarding DentAtlas.",
+        sec1Title: '<i class="fa-solid fa-envelope-circle-check"></i> Verified Official Support Email',
+        sec1P1: "For technical support, privacy inquiries, and academic feedback, reach out directly to the authorized team at NuclearMindSys:",
+        sec1P2: "We endeavor to respond to verified clinical and engineering inquiries during regular business days.",
+        sec2Title: '<i class="fa-brands fa-github"></i> Official Organization & Repositories',
+        sec2P1: "DentAtlas is built on software engineering rigor with transparent issue tracking on GitHub:",
+        sec3Title: '<i class="fa-solid fa-list-check"></i> Primary Communication Tracks',
+        sec3Ul: "<li><strong>Technical & Platform Support:</strong> Resolving desktop and mobile client installation or sync errors.</li><li><strong>Academic & Literature Review:</strong> Submitting curriculum recommendations and peer-reviewed dental literature suggestions.</li><li><strong>Privacy & Security Inquiries:</strong> Processing data deletion requests, audit questions, and security disclosures.</li>",
+        secAlertTitle: "Crucial Security Notice",
+        secAlertDesc: "The DentAtlas and NuclearMindSys teams will <strong>never</strong> ask for your Google account passwords or private authorization credentials. Communicate strictly via the verified email provided above."
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage(contactI18n);
+    });
+  </script>
+</body>
+</html>

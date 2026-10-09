@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="meta-title">حذف الحساب والبيانات — DentAtlas دنت أطلس</title>
+  <meta name="description" content="إرشادات وإجراءات حذف حساب المستخدم والبيانات السحابية والمحلية في تطبيق DentAtlas (دنت أطلس).">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/shared.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="./" class="brand">
+        <img src="assets/brand/logo_120.png" alt="DentAtlas Logo" class="brand-logo">
+        <div>
+          <div class="brand-name">
+            <span>DENTATLAS</span>
+            <span class="brand-badge">PRIVACY</span>
+          </div>
+          <span class="brand-subtitle" id="nav-tagline">الموسوعة السريرية لطب وجراحة الأسنان</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="./" class="nav-link" id="nav-home">الرئيسية</a>
+        <a href="about.html" class="nav-link" id="nav-about">حول المنصة</a>
+        <a href="privacy.html" class="nav-link" id="nav-privacy">الخصوصية</a>
+        <a href="terms.html" class="nav-link" id="nav-terms">الشروط</a>
+        <a href="support.html" class="nav-link" id="nav-support">الدعم الفني</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">تواصل معنا</a>
+        <a href="delete-account.html" class="nav-link active" id="nav-delete">حذف الحساب</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-btn" onclick="toggleLanguage(delI18n)">
+          <i class="fa-solid fa-globe"></i>
+          <span id="lang-name">English</span>
+        </button>
+        <button class="icon-btn" onclick="toggleTheme()" title="تبديل المظهر">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="subpage-hero">
+    <h1 id="hero-title">إجراءات حذف الحساب والبيانات</h1>
+    <p id="hero-sub">دليل الشفافية الكامل لمسح بياناتك المحلية وحذف حسابك السحابي المرتبط بتطبيق DentAtlas.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-main">
+
+    <!-- Overview Box -->
+    <div class="highlight-box">
+      <i class="fa-solid fa-user-xmark"></i>
+      <div>
+        <h3 id="hl-title">حقك الكامل في حذف بياناتك (Data Sovereignty)</h3>
+        <p id="hl-desc">نحن نؤمن بحق كل مستخدم وطبيب في السيطرة التامة على بياناته. نظراً لأن DentAtlas تطبيق محلي أولاً (Offline-First)، فإن بياناتك مقسمة بين ما يُخزن محلياً على جهازك وما يُزامن اختيارياً على خوادمنا السحابية. يوضح هذا الدليل كيفية حذف كل منهما بدقة وشفافية.</p>
+      </div>
+    </div>
+
+    <!-- Step 1: Local Deletion -->
+    <div class="content-card">
+      <h2 id="step1-title"><i class="fa-solid fa-mobile-screen-button"></i> 1. حذف البيانات المحلية من جهازك (فوري وتلقائي)</h2>
+      <p id="step1-p1">يمكنك في أي لحظة مسح كافة البيانات المخزنة محلياً على هاتفك أو حاسوبك مباشرة من داخل التطبيق باتباع الخطوات التالية:</p>
+      <ol id="step1-ol">
+        <li>افتح تطبيق <strong>DentAtlas</strong> وتوجه إلى شاشة <strong>الملف الشخصي (Profile)</strong>.</li>
+        <li>انزل إلى قسم <strong>الذاكرة المؤقتة والبيانات المحلية</strong> واضغط على <strong>مسح الذاكرة المؤقتة (Clear Local Cache)</strong>.</li>
+        <li>سيقوم التطبيق فوراً بمسح قاعدة بيانات SQLite المحلية (سجلات بطاقات التكرار المتباعد، الجلسات النشطة، المسودات الشخصية، وسجلات الأخطاء المحفوظة).</li>
+        <li>اضغط على <strong>تسجيل الخروج (Sign Out)</strong> لمسح مفاتيح الجلسة المشفرة المخزنة في Secure Storage.</li>
+        <li><em>(اختياري)</em> يمكنك إلغاء تثبيت التطبيق لإزالة أي ملفات مؤقتة متبقية على نظام التشغيل.</li>
+      </ol>
+    </div>
+
+    <!-- Step 2: Remote Cloud Deletion Request -->
+    <div class="content-card">
+      <h2 id="step2-title"><i class="fa-solid fa-cloud-slash"></i> 2. طلب حذف الحساب والبيانات السحابية (Remote Cloud Purge)</h2>
+      <p id="step2-p1">إذا قمت سابقاً بتسجيل الدخول بحساب Google لتفعيل المزامنة السحابية وترغب في حذف حسابك السحابي وسجلاته نهائياً من خوادم Supabase، يُرجى اتباع الإجراء المعتمد التالي:</p>
+      
+      <div style="background: var(--bg-card-hover); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin: 16px 0;">
+        <h3 style="font-size: 16px; margin-bottom: 8px; color: var(--dental-blue);" id="req-box-title"><i class="fa-solid fa-envelope"></i> خطوات تقديم طلب الحذف الرسمي:</h3>
+        <ul id="req-box-ul" style="margin-bottom: 0;">
+          <li>أرسل بريداً إلكترونياً من <strong>نفس عنوان البريد الإلكتروني لحساب Google</strong> المرتبط بحسابك إلى: <a href="mailto:NuclearMindSys@gmail.com" style="color: var(--dental-blue); font-weight: 800;">NuclearMindSys@gmail.com</a></li>
+          <li>اكتب في عنوان الرسالة: <code>طلب حذف حساب DentAtlas / Account Deletion Request</code></li>
+          <li>اذكر اسم المستخدم أو البريد المسجل لتأكيد المطابقة.</li>
+        </ul>
+      </div>
+
+      <h3 style="font-size: 16px; margin-top: 18px; margin-bottom: 8px;" id="data-scope-title">نطاق البيانات السحابية التي يتم حذفها نهائياً:</h3>
+      <p id="data-scope-p">بمجرد التحقق من ملكية الحساب، يقوم المشرف بحذف معرف المستخدم (UUID) من نظام المصادقة، مما يؤدي تلقائياً إلى مسح السجلات المرتبطة به بالتتابع (Cascade Delete) عبر جداول قاعدة البيانات:</p>
+      <ul id="data-scope-ul">
+        <li>سجل الملف الشخصي (الاسم، البريد الإلكتروني، رابط الصورة الرمزية في جدول <code>profiles</code>).</li>
+        <li>بنك الأخطاء السحابي المتزامن (جدول <code>mistake_bank</code>).</li>
+        <li>سجلات الاختبارات ومحاولات الإجابة وتواريخ التقييم (جدول <code>quiz_attempts</code> و <code>attempt_answers</code>).</li>
+        <li>محادثات واستفسارات المساعد التعليمي الذكي (جدول <code>ai_conversations</code> و <code>ai_learning_artifacts</code>).</li>
+        <li>بلاغات المستخدم المحفوظة (جدول <code>question_reports</code>).</li>
+      </ul>
+    </div>
+
+    <!-- Verification & Safety -->
+    <div class="content-card">
+      <h2 id="sec3-title"><i class="fa-solid fa-clipboard-check"></i> 3. معالجة الطلب والتأكيد</h2>
+      <p id="sec3-p1">حرصاً على أمانك، تتم مراجعة كل طلب للتحقق من هوية المرسل لمنع أي حذف كيدي للحسابات. يتم تأكيد إتمام عملية المسح النهائي عبر رسالة تأكيد إلكترونية إلى بريدك بمجرد تنفيذها.</p>
+      <p id="sec3-p2"><em>ملاحظة تقنية:</em> الكتب والمقررات والأسئلة العلمية المرفقة مع التطبيق هي أصول معرفية عامة مدمجة مع البرنامج ولا ترتبط بأي مستخدم، وبالتالي تظل متاحة في حال إعادة تثبيت التطبيق مستقبلاً.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <img src="assets/brand/logo_120.png" alt="DentAtlas Logo" class="footer-logo">
+      <div class="footer-brand" id="ft-brand">دنت أطلس · DENTATLAS</div>
+      <p class="footer-tagline" id="ft-tagline">الموسوعة السريرية لطب وجراحة الأسنان — 100% بدون إنترنت</p>
+
+      <div class="footer-links">
+        <a href="./" class="footer-link" id="fl-home">الرئيسية</a>
+        <a href="about.html" class="footer-link" id="fl-about">حول المنصة</a>
+        <a href="privacy.html" class="footer-link" id="fl-privacy">سياسة الخصوصية</a>
+        <a href="terms.html" class="footer-link" id="fl-terms">شروط الاستخدام</a>
+        <a href="support.html" class="footer-link" id="fl-support">الدعم الفني والأسئلة الشائعة</a>
+        <a href="contact.html" class="footer-link" id="fl-contact">تواصل معنا</a>
+        <a href="delete-account.html" class="footer-link" id="fl-delete">حذف الحساب والبيانات</a>
+        <a href="https://github.com/NuclearMindSys/DentAtlas" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a>
+      </div>
+
+      <p class="footer-copy" id="ft-copy">DentAtlas © 2026 · تطوير وتشغيل NuclearMindSys. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/shared.js"></script>
+  <script>
+    const delI18n = {
+      ar: {
+        metaTitle: "حذف الحساب والبيانات — DentAtlas دنت أطلس",
+        heroTitle: "إجراءات حذف الحساب والبيانات",
+        heroSub: "دليل الشفافية الكامل لمسح بياناتك المحلية وحذف حسابك السحابي المرتبط بتطبيق DentAtlas.",
+        hlTitle: "حقك الكامل في حذف بياناتك (Data Sovereignty)",
+        hlDesc: "نحن نؤمن بحق كل مستخدم وطبيب في السيطرة التامة على بياناته. نظراً لأن DentAtlas تطبيق محلي أولاً (Offline-First)، فإن بياناتك مقسمة بين ما يُخزن محلياً على جهازك وما يُزامن اختيارياً على خوادمنا السحابية. يوضح هذا الدليل كيفية حذف كل منهما بدقة وشفافية.",
+        step1Title: '<i class="fa-solid fa-mobile-screen-button"></i> 1. حذف البيانات المحلية من جهازك (فوري وتلقائي)',
+        step1P1: "يمكنك في أي لحظة مسح كافة البيانات المخزنة محلياً على هاتفك أو حاسوبك مباشرة من داخل التطبيق باتباع الخطوات التالية:",
+        step1Ol: "<li>افتح تطبيق <strong>DentAtlas</strong> وتوجه إلى شاشة <strong>الملف الشخصي (Profile)</strong>.</li><li>انزل إلى قسم <strong>الذاكرة المؤقتة والبيانات المحلية</strong> واضغط على <strong>مسح الذاكرة المؤقتة (Clear Local Cache)</strong>.</li><li>سيقوم التطبيق فوراً بمسح قاعدة بيانات SQLite المحلية (سجلات بطاقات التكرار المتباعد، الجلسات النشطة، المسودات الشخصية، وسجلات الأخطاء المحفوظة).</li><li>اضغط على <strong>تسجيل الخروج (Sign Out)</strong> لمسح مفاتيح الجلسة المشفرة المخزنة في Secure Storage.</li><li><em>(اختياري)</em> يمكنك إلغاء تثبيت التطبيق لإزالة أي ملفات مؤقتة متبقية على نظام التشغيل.</li>",
+        step2Title: '<i class="fa-solid fa-cloud-slash"></i> 2. طلب حذف الحساب والبيانات السحابية (Remote Cloud Purge)',
+        step2P1: "إذا قمت سابقاً بتسجيل الدخول بحساب Google لتفعيل المزامنة السحابية وترغب في حذف حسابك السحابي وسجلاته نهائياً من خوادم Supabase، يُرجى اتباع الإجراء المعتمد التالي:",
+        reqBoxTitle: '<i class="fa-solid fa-envelope"></i> خطوات تقديم طلب الحذف الرسمي:',
+        reqBoxUl: "<li>أرسل بريداً إلكترونياً من <strong>نفس عنوان البريد الإلكتروني لحساب Google</strong> المرتبط بحسابك إلى: <a href=\"mailto:NuclearMindSys@gmail.com\" style=\"color: var(--dental-blue); font-weight: 800;\">NuclearMindSys@gmail.com</a></li><li>اكتب في عنوان الرسالة: <code>طلب حذف حساب DentAtlas / Account Deletion Request</code></li><li>اذكر اسم المستخدم أو البريد المسجل لتأكيد المطابقة.</li>",
+        dataScopeTitle: "نطاق البيانات السحابية التي يتم حذفها نهائياً:",
+        dataScopeP: "بمجرد التحقق من ملكية الحساب، يقوم المشرف بحذف معرف المستخدم (UUID) من نظام المصادقة، مما يؤدي تلقائياً إلى مسح السجلات المرتبطة به بالتتابع (Cascade Delete) عبر جداول قاعدة البيانات:",
+        dataScopeUl: "<li>سجل الملف الشخصي (الاسم، البريد الإلكتروني، رابط الصورة الرمزية في جدول <code>profiles</code>).</li><li>بنك الأخطاء السحابي المتزامن (جدول <code>mistake_bank</code>).</li><li>سجلات الاختبارات ومحاولات الإجابة وتواريخ التقييم (جدول <code>quiz_attempts</code> و <code>attempt_answers</code>).</li><li>محادثات واستفسارات المساعد التعليمي الذكي (جدول <code>ai_conversations</code> و <code>ai_learning_artifacts</code>).</li><li>بلاغات المستخدم المحفوظة (جدول <code>question_reports</code>).</li>",
+        sec3Title: '<i class="fa-solid fa-clipboard-check"></i> 3. معالجة الطلب والتأكيد',
+        sec3P1: "حرصاً على أمانك، تتم مراجعة كل طلب للتحقق من هوية المرسل لمنع أي حذف كيدي للحسابات. يتم تأكيد إتمام عملية المسح النهائي عبر رسالة تأكيد إلكترونية إلى بريدك بمجرد تنفيذها.",
+        sec3P2: "<em>ملاحظة تقنية:</em> الكتب والمقررات والأسئلة العلمية المرفقة مع التطبيق هي أصول معرفية عامة مدمجة مع البرنامج ولا ترتبط بأي مستخدم، وبالتالي تظل متاحة في حال إعادة تثبيت التطبيق مستقبلاً."
+      },
+      en: {
+        metaTitle: "Account & Data Deletion — DentAtlas Clinical Dental Ecosystem",
+        heroTitle: "Account & Data Deletion Instructions",
+        heroSub: "Complete transparency guide for purging local device data and permanently deleting your cloud account records.",
+        hlTitle: "Your Absolute Right to Data Deletion",
+        hlDesc: "We fully respect user data autonomy. Because DentAtlas is an Offline-First application, your information is divided between local SQLite storage on your physical device and optional encrypted cloud records. This document explains the exact steps to delete each category completely.",
+        step1Title: '<i class="fa-solid fa-mobile-screen-button"></i> 1. Deleting Local Data on Your Device (Immediate & Client-Side)',
+        step1P1: "You can purge all locally stored educational records directly from the application at any time:",
+        step1Ol: "<li>Open the <strong>DentAtlas</strong> application and navigate to the <strong>Profile</strong> screen.</li><li>Scroll down to the <strong>Local Storage & Cache</strong> section and tap <strong>Clear Local Cache</strong>.</li><li>The application immediately executes a local transaction purging your SQLite tables (spaced repetition review cards, active quiz sessions, drafts, mistake history).</li><li>Tap <strong>Sign Out</strong> to securely wipe encrypted session tokens from Flutter Secure Storage.</li><li><em>(Optional)</em> Uninstall the app to remove any remaining OS cache files.</li>",
+        step2Title: '<i class="fa-solid fa-cloud-slash"></i> 2. Requesting Permanent Cloud Account Deletion (Server-Side Purge)',
+        step2P1: "If you logged in with Google to enable cloud synchronization and wish to permanently erase your account and all associated remote records from our Supabase PostgreSQL infrastructure, follow this procedure:",
+        reqBoxTitle: '<i class="fa-solid fa-envelope"></i> Formal Deletion Request Submission:',
+        reqBoxUl: "<li>Send an email from the <strong>same Google email address</strong> associated with your DentAtlas account to: <a href=\"mailto:NuclearMindSys@gmail.com\" style=\"color: var(--dental-blue); font-weight: 800;\">NuclearMindSys@gmail.com</a></li><li>Use the Subject line: <code>DentAtlas Account Deletion Request</code></li><li>Include your registered email address and display name for identity verification.</li>",
+        dataScopeTitle: "Scope of Cloud Records Permanently Purged:",
+        dataScopeP: "Upon identity verification, an administrator deletes your user record from the authentication system, which triggers an automated database cascade (ON DELETE CASCADE) purging all associated user data:",
+        dataScopeUl: "<li>User profile records (display name, email, avatar URL in table <code>profiles</code>).</li><li>Cloud-synchronized mistake bank (table <code>mistake_bank</code>).</li><li>Quiz attempts, exam scores, and answer submissions (tables <code>quiz_attempts</code> & <code>attempt_answers</code>).</li><li>AI tutor chat history and pedagogical sessions (tables <code>ai_conversations</code> & <code>ai_learning_artifacts</code>).</li><li>User feedback reports (table <code>question_reports</code>).</li>",
+        sec3Title: '<i class="fa-solid fa-clipboard-check"></i> 3. Verification & Safety Workflow',
+        sec3P1: "To protect account integrity against unauthorized or malicious deletion requests, our team verifies that requests originate from the authenticated account email. You will receive an official confirmation email once the purge is executed.",
+        sec3P2: "<em>Technical Note:</em> The core medical library, curriculum lessons, and official question bank are bundled application assets and are not user data. They remain available if you reinstall the app in the future."
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage(delI18n);
+    });
+  </script>
+</body>
+</html>
