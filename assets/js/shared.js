@@ -35,9 +35,17 @@ function updateThemeIcon(isDark) {
   }
 }
 
+function getPreferredLanguage() {
+  const saved = localStorage.getItem('dentatlas_lang');
+  if (saved === 'ar' || saved === 'en') return saved;
+  const navLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+  if (navLang.toLowerCase().startsWith('ar')) return 'ar';
+  return 'en';
+}
+
 // Language Handling
 function initLanguage(pageTranslations, onApplyLanguage) {
-  const savedLang = localStorage.getItem('dentatlas_lang') || 'ar';
+  const savedLang = getPreferredLanguage();
   applyLanguage(savedLang, pageTranslations, onApplyLanguage);
 }
 
@@ -49,6 +57,7 @@ function toggleLanguage(pageTranslations, onApplyLanguage) {
 }
 
 function applyLanguage(lang, pageTranslations, onApplyLanguage) {
+  localStorage.setItem('dentatlas_lang', lang);
   const html = document.documentElement;
   html.setAttribute('lang', lang);
   html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
