@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title id="meta-title">DentAtlas — موسوعة طب الأسنان السريرية | محاكي الأشعة والحالات السريرية</title>
   <meta id="meta-desc" name="description" content="المرجع السريري والأكاديمي المتكامل لأطباء وطلاب طب الأسنان: مكتبة كتب ومقررات سريرية بنقل حرفي 100%، محاكي صور الأشعة والحالات السريرية، بنك أسئلة مؤتمت معلل، ونظام التكرار المتباعد SM-2+ — يعمل بالكامل دون إنترنت.">
   <link rel="icon" type="image/png" href="assets/brand/favicon.png">
@@ -210,6 +213,44 @@
     .lang-btn:hover {
       border-color: var(--dental-blue);
       color: var(--dental-blue);
+    }
+
+    /* Segmented Language Switcher */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 3px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .lang-pill {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 5px 13px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .lang-pill:hover {
+      color: var(--dental-blue);
+    }
+
+    .lang-pill.active {
+      background: var(--dental-blue);
+      color: #FFFFFF !important;
+      box-shadow: 0 2px 8px rgba(47, 128, 168, 0.4);
     }
 
     /* Hero Section */
@@ -985,10 +1026,10 @@
       </div>
 
       <div class="nav-actions">
-        <button class="lang-btn" id="lang-toggle-btn" onclick="toggleLanguage()">
-          <i class="fa-solid fa-globe"></i>
-          <span id="lang-name">English</span>
-        </button>
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-pill active" id="lang-pill-ar" onclick="setLanguage('ar')">العربية</button>
+          <button type="button" class="lang-pill" id="lang-pill-en" onclick="setLanguage('en')">English</button>
+        </div>
         <button class="icon-btn" id="theme-btn" onclick="toggleTheme()" title="تبديل المظهر">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
@@ -1625,9 +1666,9 @@
         xrayReportHdr: "التقرير التشخيصي الشعاعي:",
         xrayOutputDefault: "انقر على إحدى النقاط المضيئة على الصورة الشعاعية (1 أو 2 أو 3) للاطلاع على القراءة السريرية والشعاعية النموذجية.",
 
-        c疑1: "حالة رقم: ENDO-402",
-        c疑2: "مداواة لبية متقدمة",
-        c疑3: "ألم حاد متزايد",
+        cb1: "حالة رقم: ENDO-402",
+        cb2: "مداواة لبية متقدمة",
+        cb3: "ألم حاد متزايد",
         caseTitle: "شكوى سريرية: ألم نابض عفوي في الضاحك العلوي الثاني يوقظ المريض ليلاً",
         caseFindings: "<p><strong>الفحص السريري:</strong> نخر عميق على السطح الداني الإطباقي (MOD)، اختبار البرودة (Cold Test) أحدث ألماً شديداً استمر لأكثر من 45 ثانية بعد إزالة المسبار، اختبار القرع السريري سلبي.</p><p style=\"margin-top: 6px;\"><strong>التشخيص السريري المبدئي:</strong> التهاب لب غير عكوس أعراضي (Symptomatic Irreversible Pulpitis) مع نسج حول ذروية طبيعية.</p>",
         caseBtn1: "الخطة العلاجية النموذجية",
@@ -1783,9 +1824,9 @@
         xrayReportHdr: "Radiographic Diagnostic Report:",
         xrayOutputDefault: "Click any illuminated hotspot on the radiograph (1, 2, or 3) to view the authoritative clinical reading.",
 
-        c疑1: "Case #ENDO-402",
-        c疑2: "Advanced Endodontics",
-        c疑3: "Acute Severe Pain",
+        cb1: "Case #ENDO-402",
+        cb2: "Advanced Endodontics",
+        cb3: "Acute Severe Pain",
         caseTitle: "Chief Complaint: Spontaneous throbbing pain in maxillary second premolar waking patient at night",
         caseFindings: "<p><strong>Clinical Examination:</strong> Deep disto-occlusal caries, intense prolonged pain to cold test lasting >45 seconds after stimulus removal, negative to percussion.</p><p style=\"margin-top: 6px;\"><strong>Presumptive Diagnosis:</strong> Symptomatic Irreversible Pulpitis with Normal Apical Tissues.</p>",
         caseBtn1: "Recommended Treatment Plan",
@@ -1850,10 +1891,15 @@
 
     let currentLang = getPreferredLanguage();
 
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('dentatlas_lang', lang);
+      applyLanguage(lang);
+    }
+
     function toggleLanguage() {
       currentLang = currentLang === 'ar' ? 'en' : 'ar';
-      localStorage.setItem('dentatlas_lang', currentLang);
-      applyLanguage(currentLang);
+      setLanguage(currentLang);
     }
 
     function applyLanguage(lang) {
@@ -1862,6 +1908,19 @@
       const t = i18n[lang];
       html.setAttribute('lang', lang);
       html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+      // Update segmented switcher pills
+      const pillAr = document.getElementById('lang-pill-ar');
+      const pillEn = document.getElementById('lang-pill-en');
+      if (pillAr && pillEn) {
+        if (lang === 'ar') {
+          pillAr.classList.add('active');
+          pillEn.classList.remove('active');
+        } else {
+          pillEn.classList.add('active');
+          pillAr.classList.remove('active');
+        }
+      }
 
       document.getElementById('meta-title').innerText = t.metaTitle;
       const metaD = document.getElementById('meta-desc');
@@ -1950,9 +2009,9 @@
         setEl('xray-output', t.xrayOutputDefault);
       }
 
-      setEl('c-b1', t.c疑1);
-      setEl('c-b2', t.c疑2);
-      setEl('c-b3', t.c疑3);
+      setEl('c-b1', t.cb1);
+      setEl('c-b2', t.cb2);
+      setEl('c-b3', t.cb3);
       setEl('case-title', t.caseTitle);
       setHtml('case-findings', t.caseFindings);
       setEl('case-btn-1', t.caseBtn1);

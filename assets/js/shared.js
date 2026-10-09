@@ -43,17 +43,44 @@ function getPreferredLanguage() {
   return 'en';
 }
 
+// Global translation registry
+window.__pageTranslations = null;
+
+function findElementByKey(key) {
+  let el = document.getElementById(key);
+  if (el) return el;
+
+  // Convert camelCase to kebab-case: e.g. secGoogleTitle -> sec-google-title, sec2Title -> sec2-title
+  const kebab = key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+  el = document.getElementById(kebab);
+  if (el) return el;
+
+  // Direct lowercase fallback
+  el = document.getElementById(key.toLowerCase());
+  return el;
+}
+
 // Language Handling
 function initLanguage(pageTranslations, onApplyLanguage) {
+  if (pageTranslations) {
+    window.__pageTranslations = pageTranslations;
+  }
   const savedLang = getPreferredLanguage();
   applyLanguage(savedLang, pageTranslations, onApplyLanguage);
+}
+
+function setLanguage(lang, pageTranslations, onApplyLanguage) {
+  if (pageTranslations) {
+    window.__pageTranslations = pageTranslations;
+  }
+  localStorage.setItem('dentatlas_lang', lang);
+  applyLanguage(lang, pageTranslations || window.__pageTranslations, onApplyLanguage);
 }
 
 function toggleLanguage(pageTranslations, onApplyLanguage) {
   const currentLang = document.documentElement.getAttribute('lang') || 'ar';
   const newLang = currentLang === 'ar' ? 'en' : 'ar';
-  localStorage.setItem('dentatlas_lang', newLang);
-  applyLanguage(newLang, pageTranslations, onApplyLanguage);
+  setLanguage(newLang, pageTranslations, onApplyLanguage);
 }
 
 function applyLanguage(lang, pageTranslations, onApplyLanguage) {
@@ -62,6 +89,20 @@ function applyLanguage(lang, pageTranslations, onApplyLanguage) {
   html.setAttribute('lang', lang);
   html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
+  // Update segmented pills
+  const pillAr = document.getElementById('lang-pill-ar');
+  const pillEn = document.getElementById('lang-pill-en');
+  if (pillAr && pillEn) {
+    if (lang === 'ar') {
+      pillAr.classList.add('active');
+      pillEn.classList.remove('active');
+    } else {
+      pillEn.classList.add('active');
+      pillAr.classList.remove('active');
+    }
+  }
+
+  // Legacy single toggle button
   const langText = document.getElementById('lang-name');
   if (langText) {
     langText.textContent = lang === 'ar' ? 'English' : 'العربية';
@@ -105,22 +146,44 @@ function applyLanguage(lang, pageTranslations, onApplyLanguage) {
     setT('nav-support', c.navSupport);
     setT('nav-contact', c.navContact);
     setT('nav-delete', c.navDelete);
+
+    setT('nl-home', c.navHome);
+    setT('nl-about', c.navAbout);
+    setT('nl-privacy', c.navPrivacy);
+    setT('nl-terms', c.navTerms);
+    setT('nl-support', c.navSupport);
+    setT('nl-contact', c.navContact);
+    setT('nl-delete', c.navDelete);
+
+    setT('fl-home', c.navHome);
+    setT('fl-about', c.navAbout);
+    setT('fl-privacy', c.navPrivacy);
+    setT('fl-terms', c.navTerms);
+    setT('fl-support', c.navSupport);
+    setT('fl-contact', c.navContact);
+    setT('fl-delete', c.navDelete);
+
     setT('ft-brand', c.ftBrand);
     setT('ft-tagline', c.ftTagline);
     const copyEl = document.getElementById('ft-copy');
     if (copyEl) copyEl.innerHTML = c.ftCopy;
   }
 
-  if (pageTranslations && pageTranslations[lang]) {
-    const p = pageTranslations[lang];
+  const translations = pageTranslations || window.__pageTranslations;
+  if (translations && translations[lang]) {
+    const p = translations[lang];
     for (const [key, val] of Object.entries(p)) {
-      const el = document.getElementById(key);
-      if (el) {
-        if (typeof val === 'string' && (val.includes('<') || val.includes('&'))) {
-          el.innerHTML = val;
-        } else {
-          el.textContent = val;
+      try {
+        const el = findElementByKey(key);
+        if (el) {
+          if (typeof val === 'string' && (val.includes('<') || val.includes('&'))) {
+            el.innerHTML = val;
+          } else {
+            el.textContent = val;
+          }
         }
+      } catch (err) {
+        console.warn('i18n replacement error for key:', key, err);
       }
     }
   }

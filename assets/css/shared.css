@@ -191,6 +191,44 @@ nav.site-nav {
   color: var(--dental-blue);
 }
 
+/* Segmented Language Switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 3px;
+  box-shadow: var(--shadow-sm);
+}
+
+.lang-pill {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 5px 13px;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.lang-pill:hover {
+  color: var(--dental-blue);
+}
+
+.lang-pill.active {
+  background: var(--dental-blue);
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(47, 128, 168, 0.4);
+}
+
 /* Hero Header on Subpages */
 .subpage-hero {
   background: linear-gradient(135deg, #12304A 0%, #1B4B6E 55%, #2F80A8 100%);

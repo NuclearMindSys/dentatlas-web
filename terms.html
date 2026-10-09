@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title id="meta-title">شروط الاستخدام — DentAtlas دنت أطلس</title>
   <meta name="description" content="شروط وأحكام استخدام منصة DentAtlas (دنت أطلس) — الموسوعة السريرية لطب وجراحة الأسنان وإخلاء المسؤولية التعليمية والطبية.">
   <link rel="icon" type="image/png" href="assets/brand/favicon.png">
@@ -39,10 +42,10 @@
       </div>
 
       <div class="nav-actions">
-        <button class="lang-btn" onclick="toggleLanguage(termsI18n)">
-          <i class="fa-solid fa-globe"></i>
-          <span id="lang-name">English</span>
-        </button>
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-pill" id="lang-pill-ar" onclick="setLanguage('ar')">العربية</button>
+          <button type="button" class="lang-pill" id="lang-pill-en" onclick="setLanguage('en')">English</button>
+        </div>
         <button class="icon-btn" onclick="toggleTheme()" title="تبديل المظهر">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
